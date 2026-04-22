@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>À propos - Blog Statique</title>
+	<title>Contact - Blog Statique</title>
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -14,44 +13,51 @@
 			<ul>
 				<li><a href="index.html">Accueil</a></li>
 				<li><a href="articles/articles.html">Articles</a></li>
-				<li><a href="apropos.html" class="active">À propos</a></li>
-				<li><a href="contact.html">Contact</a></li>
+				<li><a href="apropos.html">À propos</a></li>
+				<li><a href="contact.html" class="active">Contact</a></li>
 			</ul>
 		</nav>
 	</header>
 
 	<main>
 		<section class="hero">
-			<h1>À propos de nous</h1>
-			<p>Nous aidons les entreprises à offrir des expériences numériques exceptionnelles.</p>
+			<h1>Contactez-nous</h1>
+			<p>Une question ou une suggestion ? N'hésitez pas à nous écrire.</p>
 		</section>
 
 		<section class="content">
-			<h2>Notre mission</h2>
-			<p>
-				Blog Statique est une plateforme dédiée au partage de connaissances
-				sur le développement web, les bonnes pratiques et les technologies modernes.
-				Notre objectif est de fournir du contenu de qualité accessible à tous.
-			</p>
+			<form class="contact-form" action="#" method="post">
+				<div class="form-group">
+					<label for="name">Nom complet</label>
+					<input type="text" id="name" name="name" placeholder="Votre nom" required>
+				</div>
 
-			<h2>Notre équipe</h2>
-			<div class="team-grid">
-				<div class="team-member">
-					<h3>Ahmed Yassine</h3>
-					<p>Développeur & Rédacteur</p>
+				<div class="form-group">
+					<label for="email">Adresse e-mail</label>
+					<input type="email" id="email" name="email" placeholder="votre@email.com" required>
 				</div>
-				<div class="team-member">
-					<h3>Contributeurs</h3>
-					<p>Communauté open source</p>
+
+				<div class="form-group">
+					<label for="subject">Sujet</label>
+					<input type="text" id="subject" name="subject" placeholder="Objet de votre message" required>
 				</div>
+
+				<div class="form-group">
+					<label for="message">Message</label>
+					<textarea id="message" name="message" rows="6" placeholder="Votre message..." required></textarea>
+				</div>
+
+				<button type="submit" class="btn-primary">Envoyer</button>
+			</form>
+
+			<div class="contact-info">
+				<h2>Autres moyens de nous joindre</h2>
+				<ul>
+					<li>Email : contact@blogstatique.com</li>
+					<li>GitHub : github.com/Layassine/blog_statique</li>
+					<li>Localisation : Paris, France</li>
+				</ul>
 			</div>
-
-			<h2>Nos valeurs</h2>
-			<ul>
-				<li>Qualité — Un contenu fiable et bien documenté</li>
-				<li>Accessibilité — Des ressources ouvertes à tous</li>
-				<li>Collaboration — Le partage au coeur de notre démarche</li>
-			</ul>
 		</section>
 	</main>
 
