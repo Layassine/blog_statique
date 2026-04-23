@@ -48,4 +48,3 @@ blog_statique/
 
 Ahmed Yassine — [GitHub](https://github.com/Layassine)
 presentation.md
-Un problème est survenu lors de la lecture de cette vidéo.
