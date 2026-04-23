@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les bases du HTML et CSS — Mon Blog</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="../index.html">Accueil</a>
+      <a href="articles.html" class="active">Articles</a>
+      <a href="../apropos.html">À propos</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="article-content">
+    <a href="articles.html" class="retour">← Retour aux articles</a>
+
+    <h1>Les bases du HTML et CSS</h1>
+    <p class="article-date">Publié le 5 février 2025 — par Hamza Aourik</p>
+    <img src="../images/post2.jpg" alt="HTML CSS" class="article-banner">
+
+    <h2>Le HTML : la structure</h2>
+    <p>HTML (HyperText Markup Language) est le langage de base du web. Il définit la structure d'une page grâce à des balises.</p>
+    <ul>
+      <li><code>&lt;h1&gt;</code> — titre principal</li>
+      <li><code>&lt;p&gt;</code> — paragraphe</li>
+      <li><code>&lt;a href="..."&gt;</code> — lien</li>
+      <li><code>&lt;img src="..."&gt;</code> — image</li>
+      <li><code>&lt;div&gt;</code> — conteneur générique</li>
+    </ul>
+
+    <h2>Le CSS : le design</h2>
+    <p>CSS (Cascading Style Sheets) contrôle l'apparence visuelle des éléments HTML : couleurs, tailles, marges, polices.</p>
+    <ul>
+      <li><code>color</code> — couleur du texte</li>
+      <li><code>background-color</code> — couleur de fond</li>
+      <li><code>margin</code> et <code>padding</code> — espacement</li>
+      <li><code>font-size</code> — taille du texte</li>
+      <li><code>display: flex</code> — alignement des éléments</li>
+    </ul>
+
+    <h2>Conclusion</h2>
+    <p>HTML et CSS sont les fondements de tout développement web. Les maîtriser permet de créer des interfaces propres et accessibles.</p>
+
+    <div class="navigation-articles">
+      <a href="article3.html">← Article précédent</a>
+      <a href="article5.html">Article suivant →</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Blog Statique — Projet étudiant</p>
+  </footer>
+
+</body>
+</html>

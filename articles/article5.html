@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introduction à Docker — Mon Blog</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="../index.html">Accueil</a>
+      <a href="articles.html" class="active">Articles</a>
+      <a href="../apropos.html">À propos</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="article-content">
+    <a href="articles.html" class="retour">← Retour aux articles</a>
+
+    <h1>Introduction à Docker</h1>
+    <p class="article-date">Publié le 12 février 2025 — par Hamza Aourik</p>
+    <img src="../images/post1.jpg" alt="Docker" class="article-banner">
+
+    <h2>Qu'est-ce que Docker ?</h2>
+    <p>Docker est un outil de conteneurisation. Il permet d'empaqueter une application avec tout ce dont elle a besoin pour fonctionner, et de la faire tourner n'importe où de façon identique.</p>
+
+    <h2>Pourquoi utiliser Docker ?</h2>
+    <p>Docker résout le problème classique "ça marche sur ma machine mais pas sur la tienne". En conteneurisant l'application, l'environnement est identique partout.</p>
+
+    <h2>Commandes Docker de base</h2>
+    <ul>
+      <li><code>docker pull image</code> — télécharger une image</li>
+      <li><code>docker run image</code> — lancer un conteneur</li>
+      <li><code>docker ps</code> — lister les conteneurs actifs</li>
+      <li><code>docker stop id</code> — arrêter un conteneur</li>
+      <li><code>docker build -t nom .</code> — construire une image</li>
+    </ul>
+
+    <h2>Un exemple simple</h2>
+    <p>Pour servir un site web statique avec Docker et Apache, on utilise l'image officielle <code>httpd</code>. C'est ce qui est fait dans le bonus de notre projet.</p>
+
+    <h2>Conclusion</h2>
+    <p>Docker est devenu incontournable dans les équipes de développement modernes. Le comprendre, même en surface, est un vrai plus sur un CV.</p>
+
+    <div class="navigation-articles">
+      <a href="article4.html">← Article précédent</a>
+      <span></span>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Blog Statique — Projet étudiant</p>
+  </footer>
+
+</body>
+</html>

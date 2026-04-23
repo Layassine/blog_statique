@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Déployer avec Apache — Mon Blog</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="../index.html">Accueil</a>
+      <a href="articles.html" class="active">Articles</a>
+      <a href="../apropos.html">À propos</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="article-content">
+    <a href="articles.html" class="retour">← Retour aux articles</a>
+
+    <h1>Déployer un site avec Apache</h1>
+    <p class="article-date">Publié le 22 janvier 2025 — par Hamza Aourik</p>
+    <img src="../images/post2.jpg" alt="Apache" class="article-banner">
+
+    <h2>Qu'est-ce qu'Apache ?</h2>
+    <p>Apache HTTP Server est l'un des serveurs web les plus utilisés au monde. Il répond aux requêtes HTTP et affiche votre site dans le navigateur.</p>
+
+    <h2>Installation sur Ubuntu</h2>
+    <ul>
+      <li><code>sudo apt update</code></li>
+      <li><code>sudo apt install apache2</code></li>
+      <li><code>sudo systemctl start apache2</code></li>
+      <li><code>sudo systemctl enable apache2</code></li>
+    </ul>
+
+    <h2>Déployer son site</h2>
+    <p>Copiez vos fichiers HTML dans <code>/var/www/html/</code> pour que le site soit accessible via <code>http://localhost</code>.</p>
+
+    <h2>Vérifier le déploiement</h2>
+    <p>Ouvrez votre navigateur et tapez <code>http://localhost</code>. Si votre site s'affiche, c'est réussi ! Vous pouvez aussi accéder via <code>http://VOTRE_IP</code> depuis une autre machine.</p>
+
+    <h2>Conclusion</h2>
+    <p>Apache est simple à installer et fiable pour héberger des sites statiques. C'est un excellent point de départ pour comprendre les serveurs web.</p>
+
+    <div class="navigation-articles">
+      <a href="article1.html">← Article précédent</a>
+      <a href="article3.html">Article suivant →</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Blog Statique — Projet étudiant</p>
+  </footer>
+
+</body>
+</html>
