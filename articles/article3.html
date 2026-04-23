@@ -1,62 +1,93 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Travailler avec Git — Mon Blog</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MonBlog — Git et GitHub</title>
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
 
   <header>
     <nav>
-      <a href="../index.html">Accueil</a>
-      <a href="articles.html" class="active">Articles</a>
-      <a href="../apropos.html">À propos</a>
-      <a href="../contact.html">Contact</a>
+      <div class="logo">📝 MonBlog</div>
+      <ul>
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="articles.html" class="active">Articles</a></li>
+        <li><a href="../apropos.html">À propos</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <main class="article-content">
-    <a href="articles.html" class="retour">← Retour aux articles</a>
+  <section class="hero">
+    <h1>Git et GitHub</h1>
+    <p>Maîtrisez la gestion de versions pour travailler en équipe efficacement.</p>
+  </section>
 
-    <h1>Travailler avec Git et GitHub</h1>
-    <p class="article-date">Publié le 28 janvier 2025 — par Hamza Aourik</p>
-    <img src="../images/post1.jpg" alt="Git GitHub" class="article-banner">
+  <main class="content">
 
     <h2>Qu'est-ce que Git ?</h2>
-    <p>Git est un logiciel de gestion de versions. Il permet de suivre l'historique de chaque modification d'un projet et de travailler en équipe sans se marcher dessus.</p>
+    <p>
+      Git est un système de gestion de versions créé en 2005 par <strong>Linus Torvalds</strong>
+      (le même créateur de Linux). Il permet de suivre toutes les modifications apportées
+      à un projet, de revenir en arrière en cas d'erreur, et de travailler à plusieurs
+      sur le même code sans se marcher dessus.
+    </p>
 
-    <h2>Les commandes Git essentielles</h2>
+    <h2>Git vs GitHub</h2>
+    <p>
+      Ce sont deux choses différentes mais complémentaires :
+    </p>
     <ul>
-      <li><code>git init</code> — initialiser un dépôt Git</li>
-      <li><code>git clone URL</code> — copier un dépôt existant</li>
-      <li><code>git status</code> — voir les fichiers modifiés</li>
-      <li><code>git add .</code> — préparer tous les fichiers</li>
-      <li><code>git commit -m "message"</code> — enregistrer les modifications</li>
-      <li><code>git push</code> — envoyer sur GitHub</li>
-      <li><code>git pull</code> — récupérer les dernières modifications</li>
+      <li><strong>Git</strong> — l'outil installé sur votre ordinateur qui gère les versions</li>
+      <li><strong>GitHub</strong> — le site web qui héberge votre dépôt Git en ligne</li>
+      <li>Git fonctionne sans GitHub, mais GitHub a besoin de Git</li>
     </ul>
 
-    <h2>Travailler avec des branches</h2>
-    <p>Une branche permet de travailler sur une fonctionnalité sans affecter le code principal.</p>
+    <h2>Les commandes essentielles</h2>
+    <p>Voici les commandes Git que tout développeur doit connaître :</p>
     <ul>
-      <li><code>git checkout -b ma-branche</code> — créer et basculer sur une branche</li>
-      <li><code>git checkout main</code> — revenir sur la branche principale</li>
-      <li><code>git merge ma-branche</code> — fusionner une branche</li>
+      <li><strong>git init</strong> — initialiser un nouveau dépôt</li>
+      <li><strong>git clone URL</strong> — copier un dépôt existant</li>
+      <li><strong>git add fichier</strong> — préparer un fichier au commit</li>
+      <li><strong>git commit -m "message"</strong> — sauvegarder les modifications</li>
+      <li><strong>git push origin main</strong> — envoyer sur GitHub</li>
+      <li><strong>git pull origin main</strong> — récupérer les mises à jour</li>
+      <li><strong>git branch nom</strong> — créer une nouvelle branche</li>
+      <li><strong>git merge branche</strong> — fusionner deux branches</li>
+    </ul>
+
+    <h2>Le workflow en équipe</h2>
+    <p>
+      Dans un projet collaboratif, chaque développeur travaille sur sa propre
+      <strong>branche</strong> pour éviter les conflits. Une fois son travail terminé,
+      il crée une <strong>Pull Request</strong> sur GitHub pour demander la fusion
+      de son code dans la branche principale.
+    </p>
+    <ul>
+      <li>Chaque membre → sa propre branche</li>
+      <li>Des commits réguliers avec des messages clairs</li>
+      <li>Une Pull Request pour chaque fonctionnalité terminée</li>
+      <li>Un responsable qui valide et merge les PR</li>
     </ul>
 
     <h2>Conclusion</h2>
-    <p>Git est indispensable dans tout projet professionnel. Utiliser GitHub en équipe avec des branches et des pull requests est une pratique standard dans l'industrie.</p>
+    <p>
+      Git est aujourd'hui un outil indispensable dans tout projet informatique professionnel.
+      Le maîtriser, c'est s'ouvrir les portes de tous les projets open source et de toutes
+      les entreprises du secteur tech. Commencez par pratiquer sur de petits projets !
+    </p>
 
-    <div class="navigation-articles">
-      <a href="article2.html">← Article précédent</a>
-      <a href="article4.html">Article suivant →</a>
+    <div style="display:flex; justify-content:space-between; margin-top:3rem; padding-top:2rem; border-top:1px solid #e8e8ef;">
+      <a href="article2.html" class="btn-primary" style="background:#555568;">← Article précédent</a>
+      <a href="article4.html" class="btn-primary">Article suivant →</a>
     </div>
+
   </main>
 
   <footer>
-    <p>© 2025 Blog Statique — Projet étudiant</p>
+    <p>© 2024 MonBlog — Fadi Safou · Hamza Aourik · Ahmed Lamiasser · Fairouz M'Hijeb</p>
   </footer>
 
 </body>

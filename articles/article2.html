@@ -1,57 +1,95 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Déployer avec Apache — Mon Blog</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MonBlog — Apache : Serveur Web</title>
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
 
   <header>
     <nav>
-      <a href="../index.html">Accueil</a>
-      <a href="articles.html" class="active">Articles</a>
-      <a href="../apropos.html">À propos</a>
-      <a href="../contact.html">Contact</a>
+      <div class="logo">📝 MonBlog</div>
+      <ul>
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="articles.html" class="active">Articles</a></li>
+        <li><a href="../apropos.html">À propos</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <main class="article-content">
-    <a href="articles.html" class="retour">← Retour aux articles</a>
+  <section class="hero">
+    <h1>Apache : Serveur Web</h1>
+    <p>Apprenez à installer et configurer Apache sur Ubuntu pour héberger vos sites.</p>
+  </section>
 
-    <h1>Déployer un site avec Apache</h1>
-    <p class="article-date">Publié le 22 janvier 2025 — par Hamza Aourik</p>
-    <img src="../images/post2.jpg" alt="Apache" class="article-banner">
+  <main class="content">
 
     <h2>Qu'est-ce qu'Apache ?</h2>
-    <p>Apache HTTP Server est l'un des serveurs web les plus utilisés au monde. Il répond aux requêtes HTTP et affiche votre site dans le navigateur.</p>
+    <p>
+      Apache HTTP Server est l'un des serveurs web les plus utilisés au monde depuis plus
+      de 25 ans. Son rôle est simple : recevoir des requêtes HTTP d'un navigateur et
+      renvoyer les fichiers correspondants (HTML, CSS, images). C'est lui qui rend votre
+      site accessible dans un navigateur via l'adresse <strong>http://localhost</strong>.
+    </p>
 
-    <h2>Installation sur Ubuntu</h2>
+    <h2>Pourquoi utiliser Apache ?</h2>
     <ul>
-      <li><code>sudo apt update</code></li>
-      <li><code>sudo apt install apache2</code></li>
-      <li><code>sudo systemctl start apache2</code></li>
-      <li><code>sudo systemctl enable apache2</code></li>
+      <li>Gratuit et open source</li>
+      <li>Très stable et éprouvé depuis 1995</li>
+      <li>Compatible avec tous les systèmes Linux</li>
+      <li>Facile à configurer pour les débutants</li>
+      <li>Supporte les virtual hosts (plusieurs sites sur un serveur)</li>
     </ul>
 
-    <h2>Déployer son site</h2>
-    <p>Copiez vos fichiers HTML dans <code>/var/www/html/</code> pour que le site soit accessible via <code>http://localhost</code>.</p>
+    <h2>Installation sur Ubuntu / Debian</h2>
+    <p>Ouvrez un terminal et tapez les commandes suivantes une par une :</p>
+    <ul>
+      <li><strong>sudo apt update</strong> — mettre à jour la liste des paquets</li>
+      <li><strong>sudo apt install apache2 -y</strong> — installer Apache</li>
+      <li><strong>sudo systemctl start apache2</strong> — démarrer le service</li>
+      <li><strong>sudo systemctl enable apache2</strong> — démarrage automatique</li>
+      <li><strong>sudo systemctl status apache2</strong> — vérifier l'état</li>
+    </ul>
 
-    <h2>Vérifier le déploiement</h2>
-    <p>Ouvrez votre navigateur et tapez <code>http://localhost</code>. Si votre site s'affiche, c'est réussi ! Vous pouvez aussi accéder via <code>http://VOTRE_IP</code> depuis une autre machine.</p>
+    <h2>Tester l'installation</h2>
+    <p>
+      Une fois Apache installé, ouvrez votre navigateur et tapez
+      <strong>http://localhost</strong>. Vous devriez voir la page d'accueil par défaut
+      d'Apache avec le message <em>"It works!"</em>. Si c'est le cas, Apache fonctionne
+      correctement sur votre machine.
+    </p>
+
+    <h2>Déployer son site</h2>
+    <p>
+      Par défaut, Apache sert les fichiers depuis le dossier
+      <strong>/var/www/html/</strong>. Pour déployer votre blog, copiez vos fichiers
+      dans ce dossier :
+    </p>
+    <ul>
+      <li><strong>sudo cp -r * /var/www/html/</strong> — copier les fichiers</li>
+      <li><strong>sudo chmod -R 755 /var/www/html/</strong> — donner les droits</li>
+      <li>Ouvrez <strong>http://localhost</strong> pour voir votre site</li>
+    </ul>
 
     <h2>Conclusion</h2>
-    <p>Apache est simple à installer et fiable pour héberger des sites statiques. C'est un excellent point de départ pour comprendre les serveurs web.</p>
+    <p>
+      Apache est un outil fondamental pour tout développeur ou administrateur système.
+      Combiné à Linux et Git, il forme le trio parfait pour déployer des projets web
+      professionnels rapidement et efficacement.
+    </p>
 
-    <div class="navigation-articles">
-      <a href="article1.html">← Article précédent</a>
-      <a href="article3.html">Article suivant →</a>
+    <div style="display:flex; justify-content:space-between; margin-top:3rem; padding-top:2rem; border-top:1px solid #e8e8ef;">
+      <a href="article1.html" class="btn-primary" style="background:#555568;">← Article précédent</a>
+      <a href="article3.html" class="btn-primary">Article suivant →</a>
     </div>
+
   </main>
 
   <footer>
-    <p>© 2025 Blog Statique — Projet étudiant</p>
+    <p>© 2024 MonBlog — Fadi Safou · Hamza Aourik · Ahmed Lamiasser · Fairouz M'Hijeb</p>
   </footer>
 
 </body>

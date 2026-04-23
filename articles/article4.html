@@ -1,60 +1,97 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Les bases du HTML et CSS — Mon Blog</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MonBlog — HTML & CSS : Les bases du web</title>
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
 
   <header>
     <nav>
-      <a href="../index.html">Accueil</a>
-      <a href="articles.html" class="active">Articles</a>
-      <a href="../apropos.html">À propos</a>
-      <a href="../contact.html">Contact</a>
+      <div class="logo">📝 MonBlog</div>
+      <ul>
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="articles.html" class="active">Articles</a></li>
+        <li><a href="../apropos.html">À propos</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <main class="article-content">
-    <a href="articles.html" class="retour">← Retour aux articles</a>
+  <section class="hero">
+    <h1>HTML & CSS : Les bases du web</h1>
+    <p>Comprendre les deux langages fondamentaux pour créer des pages web.</p>
+  </section>
 
-    <h1>Les bases du HTML et CSS</h1>
-    <p class="article-date">Publié le 5 février 2025 — par Hamza Aourik</p>
-    <img src="../images/post2.jpg" alt="HTML CSS" class="article-banner">
+  <main class="content">
 
-    <h2>Le HTML : la structure</h2>
-    <p>HTML (HyperText Markup Language) est le langage de base du web. Il définit la structure d'une page grâce à des balises.</p>
+    <h2>Qu'est-ce que le HTML ?</h2>
+    <p>
+      HTML (HyperText Markup Language) est le langage de base de toutes les pages web.
+      Il définit la <strong>structure</strong> et le <strong>contenu</strong> d'une page :
+      titres, paragraphes, images, liens, tableaux, formulaires. Sans HTML,
+      il n'y a pas de page web.
+    </p>
+
+    <h2>Qu'est-ce que le CSS ?</h2>
+    <p>
+      CSS (Cascading Style Sheets) est le langage qui gère l'<strong>apparence visuelle</strong>
+      des pages HTML. Il contrôle les couleurs, les polices, les tailles, les marges,
+      les animations et la mise en page. Un site peut fonctionner sans CSS, mais il sera
+      très basique visuellement.
+    </p>
+
+    <h2>Les balises HTML essentielles</h2>
     <ul>
-      <li><code>&lt;h1&gt;</code> — titre principal</li>
-      <li><code>&lt;p&gt;</code> — paragraphe</li>
-      <li><code>&lt;a href="..."&gt;</code> — lien</li>
-      <li><code>&lt;img src="..."&gt;</code> — image</li>
-      <li><code>&lt;div&gt;</code> — conteneur générique</li>
+      <li><strong>&lt;html&gt;</strong> — racine de la page</li>
+      <li><strong>&lt;head&gt;</strong> — métadonnées (titre, CSS, charset)</li>
+      <li><strong>&lt;body&gt;</strong> — contenu visible de la page</li>
+      <li><strong>&lt;h1&gt; à &lt;h6&gt;</strong> — titres de différents niveaux</li>
+      <li><strong>&lt;p&gt;</strong> — paragraphe de texte</li>
+      <li><strong>&lt;a href=""&gt;</strong> — lien hypertexte</li>
+      <li><strong>&lt;img src=""&gt;</strong> — image</li>
+      <li><strong>&lt;div&gt;</strong> — bloc conteneur générique</li>
+      <li><strong>&lt;header&gt;, &lt;main&gt;, &lt;footer&gt;</strong> — balises sémantiques</li>
     </ul>
 
-    <h2>Le CSS : le design</h2>
-    <p>CSS (Cascading Style Sheets) contrôle l'apparence visuelle des éléments HTML : couleurs, tailles, marges, polices.</p>
+    <h2>Les propriétés CSS essentielles</h2>
     <ul>
-      <li><code>color</code> — couleur du texte</li>
-      <li><code>background-color</code> — couleur de fond</li>
-      <li><code>margin</code> et <code>padding</code> — espacement</li>
-      <li><code>font-size</code> — taille du texte</li>
-      <li><code>display: flex</code> — alignement des éléments</li>
+      <li><strong>color</strong> — couleur du texte</li>
+      <li><strong>background-color</strong> — couleur de fond</li>
+      <li><strong>font-size</strong> — taille de la police</li>
+      <li><strong>margin / padding</strong> — espacement extérieur / intérieur</li>
+      <li><strong>display: flex</strong> — mise en page flexible</li>
+      <li><strong>display: grid</strong> — mise en page en grille</li>
+      <li><strong>border-radius</strong> — coins arrondis</li>
+      <li><strong>box-shadow</strong> — ombre portée</li>
     </ul>
+
+    <h2>La règle d'or</h2>
+    <p>
+      HTML s'occupe du <strong>fond</strong> (contenu, structure, sémantique) et
+      CSS s'occupe de la <strong>forme</strong> (couleurs, tailles, mise en page).
+      Ne mélangez jamais les deux : évitez les styles inline dans le HTML,
+      centralisez tout dans un fichier CSS séparé.
+    </p>
 
     <h2>Conclusion</h2>
-    <p>HTML et CSS sont les fondements de tout développement web. Les maîtriser permet de créer des interfaces propres et accessibles.</p>
+    <p>
+      HTML et CSS sont les fondations incontournables du développement web. Maîtrisez-les
+      avant de passer à JavaScript ou aux frameworks. La pratique régulière est la clé :
+      recréez des sites existants pour progresser rapidement.
+    </p>
 
-    <div class="navigation-articles">
-      <a href="article3.html">← Article précédent</a>
-      <a href="article5.html">Article suivant →</a>
+    <div style="display:flex; justify-content:space-between; margin-top:3rem; padding-top:2rem; border-top:1px solid #e8e8ef;">
+      <a href="article3.html" class="btn-primary" style="background:#555568;">← Article précédent</a>
+      <a href="article5.html" class="btn-primary">Article suivant →</a>
     </div>
+
   </main>
 
   <footer>
-    <p>© 2025 Blog Statique — Projet étudiant</p>
+    <p>© 2024 MonBlog — Fadi Safou · Hamza Aourik · Ahmed Lamiasser · Fairouz M'Hijeb</p>
   </footer>
 
 </body>

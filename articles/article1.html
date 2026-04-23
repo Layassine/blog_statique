@@ -1,56 +1,95 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Introduction à Linux — Mon Blog</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MonBlog — Introduction à Linux</title>
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
 
   <header>
     <nav>
-      <a href="../index.html">Accueil</a>
-      <a href="articles.html" class="active">Articles</a>
-      <a href="../apropos.html">À propos</a>
-      <a href="../contact.html">Contact</a>
+      <div class="logo">📝 MonBlog</div>
+      <ul>
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="articles.html" class="active">Articles</a></li>
+        <li><a href="../apropos.html">À propos</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <main class="article-content">
-    <a href="articles.html" class="retour">← Retour aux articles</a>
-
+  <section class="hero">
     <h1>Introduction à Linux</h1>
-    <p class="article-date">Publié le 15 janvier 2025 — par Hamza Aourik</p>
-    <img src="../images/post1.jpg" alt="Linux" class="article-banner">
+    <p>Découvrez les bases du système d'exploitation libre qui fait tourner le monde.</p>
+  </section>
+
+  <main class="content">
 
     <h2>Qu'est-ce que Linux ?</h2>
-    <p>Linux est un système d'exploitation open source créé par Linus Torvalds en 1991. Il est aujourd'hui utilisé sur des millions de serveurs à travers le monde.</p>
+    <p>
+      Linux est un système d'exploitation libre et open source, créé en 1991 par
+      <strong>Linus Torvalds</strong>. Contrairement à Windows ou macOS, Linux est
+      entièrement gratuit, transparent et modifiable par n'importe qui dans le monde.
+      Aujourd'hui, il équipe la majorité des serveurs web, les supercalculateurs,
+      les smartphones Android et même la Station Spatiale Internationale.
+    </p>
 
     <h2>Pourquoi apprendre Linux ?</h2>
-    <p>La majorité des serveurs web et des environnements de développement professionnels tournent sous Linux. Le maîtriser est un atout majeur pour tout développeur ou administrateur système.</p>
+    <p>
+      Que vous soyez développeur, administrateur système ou étudiant en informatique,
+      Linux est incontournable. Il vous donne une maîtrise totale de votre machine,
+      vous prépare au travail sur des serveurs distants et vous apprend comment les
+      systèmes fonctionnent vraiment.
+    </p>
+    <ul>
+      <li>Utilisé par 96% des serveurs web dans le monde</li>
+      <li>Entièrement gratuit et open source</li>
+      <li>Très sécurisé et stable</li>
+      <li>Indispensable pour le développement et le DevOps</li>
+    </ul>
+
+    <h2>Les distributions populaires</h2>
+    <p>
+      Il existe de nombreuses versions de Linux appelées <strong>distributions</strong>.
+      Chacune est adaptée à un usage particulier :
+    </p>
+    <ul>
+      <li><strong>Ubuntu</strong> — la plus populaire pour les débutants</li>
+      <li><strong>Debian</strong> — très stable, idéale pour les serveurs</li>
+      <li><strong>Fedora</strong> — orientée développeurs, toujours à jour</li>
+      <li><strong>Arch Linux</strong> — pour les utilisateurs avancés</li>
+      <li><strong>Kali Linux</strong> — spécialisée en cybersécurité</li>
+    </ul>
 
     <h2>Les commandes de base</h2>
+    <p>Voici les commandes essentielles pour débuter sous Linux :</p>
     <ul>
-      <li><code>ls</code> — lister les fichiers d'un dossier</li>
-      <li><code>cd</code> — changer de répertoire</li>
-      <li><code>mkdir</code> — créer un dossier</li>
-      <li><code>cp</code> — copier un fichier</li>
-      <li><code>rm</code> — supprimer un fichier</li>
-      <li><code>sudo</code> — exécuter en mode administrateur</li>
+      <li><strong>pwd</strong> — affiche le dossier courant</li>
+      <li><strong>ls -la</strong> — liste les fichiers avec détails</li>
+      <li><strong>cd /chemin</strong> — changer de dossier</li>
+      <li><strong>mkdir nom</strong> — créer un dossier</li>
+      <li><strong>rm fichier</strong> — supprimer un fichier</li>
+      <li><strong>sudo</strong> — exécuter en tant qu'administrateur</li>
     </ul>
 
     <h2>Conclusion</h2>
-    <p>Linux est un outil puissant. En pratiquant régulièrement dans un terminal, vous serez rapidement à l'aise avec cet environnement.</p>
+    <p>
+      Linux n'est pas juste un système d'exploitation, c'est une philosophie : la liberté,
+      la transparence et la collaboration. N'hésitez pas à installer Ubuntu et à explorer
+      par vous-même — c'est la meilleure façon d'apprendre !
+    </p>
 
-    <div class="navigation-articles">
-      <span></span>
-      <a href="article2.html">Article suivant →</a>
+    <div style="display:flex; justify-content:space-between; margin-top:3rem; padding-top:2rem; border-top:1px solid #e8e8ef;">
+      <a href="articles.html" class="btn-primary" style="background:#555568;">← Retour aux articles</a>
+      <a href="article2.html" class="btn-primary">Article suivant →</a>
     </div>
+
   </main>
 
   <footer>
-    <p>© 2025 Blog Statique — Projet étudiant</p>
+    <p>© 2024 MonBlog — Fadi Safou · Hamza Aourik · Ahmed Lamiasser · Fairouz M'Hijeb</p>
   </footer>
 
 </body>

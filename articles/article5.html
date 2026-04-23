@@ -1,58 +1,99 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Introduction à Docker — Mon Blog</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MonBlog — Introduction à Docker</title>
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
 
   <header>
     <nav>
-      <a href="../index.html">Accueil</a>
-      <a href="articles.html" class="active">Articles</a>
-      <a href="../apropos.html">À propos</a>
-      <a href="../contact.html">Contact</a>
+      <div class="logo">📝 MonBlog</div>
+      <ul>
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="articles.html" class="active">Articles</a></li>
+        <li><a href="../apropos.html">À propos</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <main class="article-content">
-    <a href="articles.html" class="retour">← Retour aux articles</a>
-
+  <section class="hero">
     <h1>Introduction à Docker</h1>
-    <p class="article-date">Publié le 12 février 2025 — par Hamza Aourik</p>
-    <img src="../images/post1.jpg" alt="Docker" class="article-banner">
+    <p>Découvrez la conteneurisation et pourquoi Docker révolutionne le déploiement.</p>
+  </section>
+
+  <main class="content">
 
     <h2>Qu'est-ce que Docker ?</h2>
-    <p>Docker est un outil de conteneurisation. Il permet d'empaqueter une application avec tout ce dont elle a besoin pour fonctionner, et de la faire tourner n'importe où de façon identique.</p>
+    <p>
+      Docker est une plateforme de <strong>conteneurisation</strong> lancée en 2013.
+      Elle permet d'empaqueter une application et toutes ses dépendances dans un
+      <strong>conteneur</strong> — une unité légère et portable qui fonctionne
+      de manière identique sur n'importe quelle machine, que ce soit votre ordinateur
+      personnel, un serveur de production ou le cloud.
+    </p>
 
-    <h2>Pourquoi utiliser Docker ?</h2>
-    <p>Docker résout le problème classique "ça marche sur ma machine mais pas sur la tienne". En conteneurisant l'application, l'environnement est identique partout.</p>
-
-    <h2>Commandes Docker de base</h2>
+    <h2>Conteneur vs Machine Virtuelle</h2>
+    <p>
+      Beaucoup confondent les deux. Voici la différence essentielle :
+    </p>
     <ul>
-      <li><code>docker pull image</code> — télécharger une image</li>
-      <li><code>docker run image</code> — lancer un conteneur</li>
-      <li><code>docker ps</code> — lister les conteneurs actifs</li>
-      <li><code>docker stop id</code> — arrêter un conteneur</li>
-      <li><code>docker build -t nom .</code> — construire une image</li>
+      <li><strong>Machine Virtuelle</strong> — émule un ordinateur complet avec son propre OS (lourd, lent)</li>
+      <li><strong>Conteneur Docker</strong> — partage le noyau du système hôte (léger, rapide)</li>
+      <li>Un conteneur démarre en quelques secondes, une VM en plusieurs minutes</li>
+      <li>Un conteneur utilise beaucoup moins de mémoire qu'une VM</li>
     </ul>
 
-    <h2>Un exemple simple</h2>
-    <p>Pour servir un site web statique avec Docker et Apache, on utilise l'image officielle <code>httpd</code>. C'est ce qui est fait dans le bonus de notre projet.</p>
+    <h2>Les concepts clés</h2>
+    <ul>
+      <li><strong>Image</strong> — le modèle de base (comme une recette de cuisine)</li>
+      <li><strong>Conteneur</strong> — une instance en cours d'exécution d'une image</li>
+      <li><strong>Dockerfile</strong> — le fichier qui décrit comment construire une image</li>
+      <li><strong>Docker Hub</strong> — le registre public d'images Docker</li>
+      <li><strong>docker-compose</strong> — outil pour gérer plusieurs conteneurs ensemble</li>
+    </ul>
+
+    <h2>Commandes Docker essentielles</h2>
+    <ul>
+      <li><strong>docker pull nginx</strong> — télécharger une image depuis Docker Hub</li>
+      <li><strong>docker run -d -p 80:80 nginx</strong> — lancer un conteneur</li>
+      <li><strong>docker ps</strong> — lister les conteneurs actifs</li>
+      <li><strong>docker stop id</strong> — arrêter un conteneur</li>
+      <li><strong>docker build -t monapp .</strong> — construire une image depuis un Dockerfile</li>
+      <li><strong>docker images</strong> — lister les images locales</li>
+    </ul>
+
+    <h2>Docker dans notre projet</h2>
+    <p>
+      Pour notre blog statique, Docker permet de déployer Apache et notre site
+      dans un conteneur portable. Voici un exemple simple de Dockerfile :
+    </p>
+    <ul>
+      <li><strong>FROM httpd:2.4</strong> — utiliser l'image Apache officielle</li>
+      <li><strong>COPY . /usr/local/apache2/htdocs/</strong> — copier les fichiers du site</li>
+      <li><strong>EXPOSE 80</strong> — exposer le port 80</li>
+    </ul>
 
     <h2>Conclusion</h2>
-    <p>Docker est devenu incontournable dans les équipes de développement modernes. Le comprendre, même en surface, est un vrai plus sur un CV.</p>
+    <p>
+      Docker simplifie radicalement le déploiement d'applications. Avec un seul fichier
+      Dockerfile, n'importe qui peut lancer votre projet en une commande, sans se soucier
+      de la configuration du serveur. C'est aujourd'hui une compétence très recherchée
+      dans le monde professionnel.
+    </p>
 
-    <div class="navigation-articles">
-      <a href="article4.html">← Article précédent</a>
-      <span></span>
+    <div style="display:flex; justify-content:space-between; margin-top:3rem; padding-top:2rem; border-top:1px solid #e8e8ef;">
+      <a href="article4.html" class="btn-primary" style="background:#555568;">← Article précédent</a>
+      <a href="articles.html" class="btn-primary">Tous les articles</a>
     </div>
+
   </main>
 
   <footer>
-    <p>© 2025 Blog Statique — Projet étudiant</p>
+    <p>© 2024 MonBlog — Fadi Safou · Hamza Aourik · Ahmed Lamiasser · Fairouz M'Hijeb</p>
   </footer>
 
 </body>
