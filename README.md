@@ -187,10 +187,10 @@ hostname -I   # Récupérer l'IP du serveur
 
 ```
 main
-├── fadi/homepage-ui
+├── fadi_branch
 ├── hamza/articles-pages
-├── ahmed/deployment-linux
-└── fairouz/docs-pages
+├── ahmedyassine_branche
+└── fairouz_branche
 ```
 
 ### Convention des commits
@@ -222,10 +222,10 @@ main
 - [x] Pull Requests et merges effectués
 
 ### Linux / Apache
-- [ ] Apache installé et actif
-- [ ] Site copié dans `/var/www/html/`
-- [ ] Site accessible via `localhost`
-- [ ] Site accessible via IP locale
+- [x] Apache installé et actif
+- [x] Site copié dans `/var/www/html/`
+- [x] Site accessible via `localhost`
+- [x] Site accessible via IP locale
 
 ### Documentation
 - [x] `README.md` complété
